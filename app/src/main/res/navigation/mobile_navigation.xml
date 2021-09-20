@@ -3,23 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_salle_main">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.market.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_salle_main"
+        android:name="com.example.market.ui.MainSaleFragment"
+        android:label="@string/menu_speet_sale"
+        tools:layout="@layout/fragment_main_sale" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.market.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_add_actual"
+        android:name="com.example.market.ui.ProductAddActualFragment"
+        android:label="@string/menu_product_add"
+        tools:layout="@layout/fragment_product_add_actual" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.market.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_selling"
+        android:name="com.example.market.ui.SellingFragment"
+        android:label="@string/menu_selling"
+        tools:layout="@layout/fragment_selling" />
+    <fragment
+        android:id="@+id/nav_contition"
+        android:name="com.example.market.ui.ConditionStockFragment"
+        android:label="@string/menu_stock_contition"
+        tools:layout="@layout/fragment_condition_stock" />
 </navigation>
