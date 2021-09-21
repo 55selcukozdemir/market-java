@@ -8,31 +8,10 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="main sale"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-191dp" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="202dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="bas"
-            android:id="@+id/buttonPanel11"
-            android:onClick="bass"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="yeni" />
-    </LinearLayout>
 
 </FrameLayout>
