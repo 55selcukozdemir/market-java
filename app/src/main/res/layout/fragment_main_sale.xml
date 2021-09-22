@@ -63,7 +63,8 @@
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:layout_weight="0.01"
-            android:text="sepet" />
+            android:text="sepet"
+            android:textColor="@color/secondaryTextColor" />
     </LinearLayout>
 
 </LinearLayout>
