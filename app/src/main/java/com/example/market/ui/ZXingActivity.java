@@ -13,12 +13,14 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.market.R;
+import com.example.market.product.BundleBarcode;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ZXingActivity extends Activity implements ZXingScannerView.ResultHandler{
     private ZXingScannerView mScannerView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +43,11 @@ public class ZXingActivity extends Activity implements ZXingScannerView.ResultHa
     public void handleResult(Result rawResult) {
         Toast.makeText(this, "Content = " + rawResult.getText() + ", Format = " + rawResult.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
 
+        BundleBarcode b = new BundleBarcode();
+        b.setBarcode(rawResult.getText());
+
+
+
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -49,6 +56,8 @@ public class ZXingActivity extends Activity implements ZXingScannerView.ResultHa
             }
         },200);
 
+        onBackPressed();
+
     }
 
     @Override
@@ -56,4 +65,6 @@ public class ZXingActivity extends Activity implements ZXingScannerView.ResultHa
         super.onPause();
         mScannerView.stopCamera();
     }
+
+
 }

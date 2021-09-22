@@ -16,6 +16,7 @@ import com.example.market.R;
 import com.example.market.adapter.MainViewPagerAdapter;
 import com.example.market.adapter.SaleInEndAdapter;
 import com.example.market.databinding.FragmentNavMainSaleBinding;
+import com.example.market.product.BundleBarcode;
 import com.example.market.product.ProductList;
 import com.example.market.product.SaleInEnd;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -27,6 +28,9 @@ import java.util.ArrayList;
 public class MainSaleFragment extends Fragment {
 
     public FragmentNavMainSaleBinding binding;
+
+
+    private int count = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,6 +69,13 @@ public class MainSaleFragment extends Fragment {
 
             }
         });
+
+
+        count ++;
+
+
+
+
 
 
         configureTabLayout();
@@ -108,4 +119,10 @@ public class MainSaleFragment extends Fragment {
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        BundleBarcode b = new BundleBarcode();
+        binding.editTextTextPersonName.setText(b.getBarcode());
+    }
 }

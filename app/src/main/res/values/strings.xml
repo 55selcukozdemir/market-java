@@ -9,7 +9,7 @@
 
     <string name="menu_speet_sale">Hızlı Satış</string>
     <string name="menu_product_add">Ürün Ekle Güncelle</string>
-    <string name="menu_selling">Stışlar</string>
+    <string name="menu_selling">Satışlar</string>
     <string name="menu_stock_contition">Stok Durumu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

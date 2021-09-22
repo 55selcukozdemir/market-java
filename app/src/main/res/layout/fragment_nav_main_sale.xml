@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabMode="scrollable"
+            app:tabGravity="center"
             tools:ignore="SpeakableTextPresentCheck">
 
 
@@ -47,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="Barkod" />
 
             <Button
                 android:id="@+id/main_barcode_button"
