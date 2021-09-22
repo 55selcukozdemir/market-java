@@ -32,21 +32,7 @@ public class SellingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentSellingBinding.inflate(getLayoutInflater());
 
-        //Fragment içine BottomSheet eklenmesi
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(container.getContext());
-        bottomSheetDialog.setContentView(R.layout.bottomshet);
-        bottomSheetDialog.show();
-        //Fragment içine BottomSheet eklenmesi (son)
 
-
-        //Bottom Sheet içine RecyclerView eklenmesi
-        ArrayList<SaleInEnd> saleArrayList = new ArrayList<>();
-        saleArrayList.add(new SaleInEnd("yeni","eski","devam","tamam"));
-        RecyclerView mRecyclerView = bottomSheetDialog.findViewById(R.id.bottomSheetRecyclerView);
-        SaleInEndAdapter saleInEndAdapter = new SaleInEndAdapter(saleArrayList,container.getContext());
-        mRecyclerView.setAdapter(saleInEndAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
-        ////Bottom Sheet içine RecyclerView eklenmesi (son)
 
         return binding.getRoot();
     }
