@@ -1,5 +1,6 @@
 package com.example.market.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -53,6 +54,15 @@ public class MainSaleFragment extends Fragment {
                 mRecyclerView.setAdapter(saleInEndAdapter);
                 mRecyclerView.setLayoutManager(new LinearLayoutManager(container.getContext()));
                 ////Bottom Sheet içine RecyclerView eklenmesi (son)
+            }
+        });
+
+        binding.mainBarcodeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(),ZXingActivity.class);
+                startActivity(i);
+
             }
         });
 

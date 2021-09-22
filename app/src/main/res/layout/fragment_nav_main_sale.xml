@@ -29,10 +29,34 @@
             android:id="@+id/main_fragmet_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             tools:ignore="SpeakableTextPresentCheck">
 
         </androidx.viewpager.widget.ViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.01"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/main_barcode_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tara"
+                android:textColor="@color/primaryTextColor"
+                app:iconTint="@color/primaryTextColor" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

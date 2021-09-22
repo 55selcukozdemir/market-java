@@ -1,7 +1,9 @@
 package com.example.market.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
@@ -15,15 +17,18 @@ import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class ZXingFragment extends Fragment implements ZXingScannerView.ResultHandler{
+public class ZXingActivity extends Activity implements ZXingScannerView.ResultHandler{
     private ZXingScannerView mScannerView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        mScannerView = new ZXingScannerView(inflater.getContext());
-        return mScannerView;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mScannerView = new ZXingScannerView(this);
+        setContentView(mScannerView);
     }
+
+
+
 
     @Override
     public void onResume() {
@@ -34,13 +39,13 @@ public class ZXingFragment extends Fragment implements ZXingScannerView.ResultHa
 
     @Override
     public void handleResult(Result rawResult) {
-        Toast.makeText(getActivity(), "Content = " + rawResult.getText() + ", Format = " + rawResult.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Content = " + rawResult.getText() + ", Format = " + rawResult.getBarcodeFormat().toString(), Toast.LENGTH_SHORT).show();
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mScannerView.resumeCameraPreview(ZXingFragment.this);
+                mScannerView.resumeCameraPreview(ZXingActivity.this);
             }
         },200);
 
