@@ -15,6 +15,7 @@ import com.example.market.R;
 import com.example.market.adapter.MainViewPagerAdapter;
 import com.example.market.adapter.SaleInEndAdapter;
 import com.example.market.databinding.FragmentMainSaleBinding;
+import com.example.market.product.ProductList;
 import com.example.market.product.SaleInEnd;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
@@ -36,7 +37,7 @@ public class MainSaleFragment extends Fragment {
             public void onClick(View view) {
                 //Fragment içine BottomSheet eklenmesi
                 final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(container.getContext());
-                bottomSheetDialog.setContentView(R.layout.bottomshet);
+                bottomSheetDialog.setContentView(R.layout.bottom_sheet_main_scutlle);
                 bottomSheetDialog.show();
                 //Fragment içine BottomSheet eklenmesi (son)
 
@@ -46,6 +47,7 @@ public class MainSaleFragment extends Fragment {
                 //Bottom Sheet içine RecyclerView eklenmesi
                 ArrayList<SaleInEnd> saleArrayList = new ArrayList<>();
                 saleArrayList.add(new SaleInEnd("yeni","eski","devam","tamam"));
+
                 RecyclerView mRecyclerView = bottomSheetDialog.findViewById(R.id.bottomSheetRecyclerView);
                 SaleInEndAdapter saleInEndAdapter = new SaleInEndAdapter(saleArrayList,container.getContext());
                 mRecyclerView.setAdapter(saleInEndAdapter);
@@ -72,8 +74,25 @@ public class MainSaleFragment extends Fragment {
 
         MainViewPagerAdapter adapter  = new MainViewPagerAdapter(getChildFragmentManager());
 
-        adapter.addFrag(new Tab1Fragment(),"tab1");
-        adapter.addFrag(new Tab2Fragment(),"tab2");
+
+        ArrayList<ProductList> mList = new ArrayList<>();
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+        mList.add(new ProductList("ürün","1123546464",1f,15,R.drawable.ic_menu_camera));
+
+        Fragment b = new MainSaleGridFragment(mList);
+        Fragment c = new MainSaleGridFragment(mList);
+        Fragment s = new MainSaleGridFragment(mList);
+
+        //adapter.addFrag(new Tab1Fragment(),"tab1");
+        //adapter.addFrag(new Tab2Fragment(),"tab2");
+        adapter.addFrag(b,"tab1");
+        adapter.addFrag(c,"tab2");
+        adapter.addFrag(s,"tab3");
 
         viewPager.setAdapter(adapter);
 

@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class SaleInEndAdapter extends RecyclerView.Adapter<SaleInEndAdapter.ViewHolder>{
 
-    ArrayList<SaleInEnd> mArraylist;
-    Context context;
+    private ArrayList<SaleInEnd> mArraylist;
+    private Context context;
 
     public SaleInEndAdapter(ArrayList<SaleInEnd> mArraylist, Context context) {
         this.mArraylist = mArraylist;
@@ -30,7 +30,7 @@ public class SaleInEndAdapter extends RecyclerView.Adapter<SaleInEndAdapter.View
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater= LayoutInflater.from(context);
-        View contactView = inflater.inflate(R.layout.sale_in_end,parent,false);
+        View contactView = inflater.inflate(R.layout.recyclerview_companent_sale_in_end,parent,false);
         ViewHolder viewHolder = new ViewHolder(contactView);
         return viewHolder;
     }
