@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import com.example.market.R;
 import com.example.market.adapter.MainViewPagerAdapter;
 import com.example.market.adapter.SaleInEndAdapter;
-import com.example.market.databinding.FragmentMainSaleBinding;
+import com.example.market.databinding.FragmentNavMainSaleBinding;
 import com.example.market.product.ProductList;
 import com.example.market.product.SaleInEnd;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -25,12 +25,12 @@ import java.util.ArrayList;
 
 public class MainSaleFragment extends Fragment {
 
-    public FragmentMainSaleBinding binding;
+    public FragmentNavMainSaleBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentMainSaleBinding.inflate(getLayoutInflater());
+        binding = FragmentNavMainSaleBinding.inflate(getLayoutInflater());
 
         binding.mainFragmentGoToScuttle.setOnClickListener(new View.OnClickListener() {
             @Override

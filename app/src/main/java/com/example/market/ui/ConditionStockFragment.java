@@ -9,17 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.market.R;
-import com.example.market.databinding.FragmentConditionStockBinding;
+import com.example.market.databinding.FragmentNavConditionStockBinding;
 
 
 public class ConditionStockFragment extends Fragment {
 
-    public FragmentConditionStockBinding binding;
+    public FragmentNavConditionStockBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentConditionStockBinding.inflate(getLayoutInflater());
+        binding = FragmentNavConditionStockBinding.inflate(getLayoutInflater());
 
         return binding.getRoot();
     }

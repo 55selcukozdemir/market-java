@@ -8,18 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.market.R;
-import com.example.market.databinding.FragmentProductAddActualBinding;
+import com.example.market.databinding.FragmentNavProductAddActualBinding;
+
 
 
 public class ProductAddActualFragment extends Fragment {
 
-    public FragmentProductAddActualBinding binding;
+    public FragmentNavProductAddActualBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentProductAddActualBinding.inflate(getLayoutInflater());
+        binding = FragmentNavProductAddActualBinding.inflate(getLayoutInflater());
 
         return binding.getRoot();
     }
