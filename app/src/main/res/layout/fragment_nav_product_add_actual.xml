@@ -20,7 +20,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/product_name"
+                android:id="@+id/product_name_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -31,7 +31,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2n"
+                android:id="@+id/product_name_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -47,7 +47,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/product_name_"
+                android:id="@+id/barcode_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -58,7 +58,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonNamev2"
+                android:id="@+id/barcode_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -66,7 +66,7 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/barcode_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -83,7 +83,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/product_name_vtex"
+                android:id="@+id/price_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -94,7 +94,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersodnName2"
+                android:id="@+id/price_edit_text"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -102,7 +102,7 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/get_price_text"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -112,7 +112,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/get_price_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -128,7 +128,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/product_name_tex"
+                android:id="@+id/product_contition_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -139,7 +139,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/product_contition_edit_text"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -147,7 +147,7 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/add_product_contition_text"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -157,7 +157,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/add_product_contition_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -173,7 +173,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/category_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -189,12 +189,12 @@
                 android:orientation="vertical">
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/category_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <Button
-                    android:id="@+id/button14"
+                    android:id="@+id/category_add_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kategori Ekle"
@@ -203,7 +203,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView13d"
+                android:id="@+id/monad_text"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
@@ -219,7 +219,7 @@
                 android:orientation="vertical">
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/monad_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -237,7 +237,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/product_image_view"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_marginRight="10dp"
@@ -245,7 +245,7 @@
                     tools:src="@drawable/cashiermachine" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/product_image_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -261,7 +261,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button16"
+                    android:id="@+id/product_image_add_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Fotoğraf ekle"
@@ -269,7 +269,7 @@
                     android:textSize="10sp" />
 
                 <Button
-                    android:id="@+id/button15"
+                    android:id="@+id/product_image_delete_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="fotoğraf sil"
@@ -293,7 +293,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button17"
+                    android:id="@+id/delete_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="sil"
@@ -310,7 +310,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button20"
+                    android:id="@+id/actual_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="güncelle"
