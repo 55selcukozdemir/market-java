@@ -47,7 +47,6 @@ public class ZXingActivity extends Activity implements ZXingScannerView.ResultHa
         b.setBarcode(rawResult.getText());
 
 
-
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
